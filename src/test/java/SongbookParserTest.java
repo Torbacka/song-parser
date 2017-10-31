@@ -1,6 +1,6 @@
 import business.SongbookParser;
-import model.Lyrics;
-import model.RawLyrics;
+import model.DISK.Lyrics;
+import model.DISK.RawLyrics;
 import org.junit.Before;
 import org.junit.Test;
 

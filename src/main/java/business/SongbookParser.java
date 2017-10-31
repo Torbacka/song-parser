@@ -1,7 +1,7 @@
 package business;
 
-import model.Lyrics;
-import model.RawLyrics;
+import model.DISK.Lyrics;
+import model.DISK.RawLyrics;
 
 import java.io.IOException;
 import java.nio.file.Files;
