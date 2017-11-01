@@ -12,6 +12,11 @@ public class Text {
     @XmlElement
     private List<String> extraVerses;
 
+    public Text(List<String> verses, List<String> extraVerses) {
+        this.verses = verses;
+        this.extraVerses = extraVerses;
+    }
+
     public List<String> getVerses() {
         return verses;
     }

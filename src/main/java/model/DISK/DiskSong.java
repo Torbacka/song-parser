@@ -2,7 +2,7 @@ package model.DISK;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Song {
+public class DiskSong {
     @JsonProperty
     private String title;
     @JsonProperty
@@ -14,7 +14,7 @@ public class Song {
     @JsonProperty
     private String fact;
 
-    public Song(String title, String melody, String author, String text, String fact) {
+    public DiskSong(String title, String melody, String author, String text, String fact) {
         this.title = title;
         this.melody = melody;
         this.author = author;

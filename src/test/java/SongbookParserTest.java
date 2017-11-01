@@ -1,4 +1,4 @@
-import business.SongbookParser;
+import business.DISK.DiskParser;
 import model.DISK.Lyrics;
 import model.DISK.RawLyrics;
 import org.junit.Before;
@@ -21,11 +21,11 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Created by Daniel on 2017-02-05.
  */
 public class SongbookParserTest {
-    private SongbookParser songbookParser;
+    private DiskParser songbookParser;
 
     @Before
     public void init() {
-        songbookParser = new SongbookParser();
+        songbookParser = new DiskParser();
     }
 
     @Test

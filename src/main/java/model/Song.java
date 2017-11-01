@@ -23,6 +23,15 @@ public class Song {
     @XmlAttribute
     private double score;
 
+    public Song(Text text, Title title, List<String> authors, String category, String trivia, double score) {
+        this.text = text;
+        this.title = title;
+        this.authors = authors;
+        this.category = category;
+        this.trivia = trivia;
+        this.score = score;
+    }
+
     public Text getText() {
         return text;
     }

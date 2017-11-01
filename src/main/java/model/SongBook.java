@@ -18,6 +18,11 @@ public class SongBook {
     @XmlElement
     private List<Song> songs;
 
+    public SongBook(LocalDate publicationDate, List<Song> songs) {
+        this.publicationDate = publicationDate;
+        this.songs = songs;
+    }
+
     public LocalDate getPublicationDate() {
         return publicationDate;
     }

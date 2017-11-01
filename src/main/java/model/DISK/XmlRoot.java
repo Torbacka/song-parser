@@ -12,17 +12,17 @@ import java.util.List;
 @XmlSeeAlso({Lyrics.class})
 public class XmlRoot {
     @XmlElement
-    private List<Song> lyrics;
+    private List<DiskSong> lyrics;
 
     public XmlRoot() {
 
     }
 
-    public XmlRoot(List<Song> lyricss) {
+    public XmlRoot(List<DiskSong> lyricss) {
         this.lyrics = lyricss;
     }
 
-    public List<Song> getLyricss() {
+    public List<DiskSong> getLyricss() {
         return lyrics;
     }
 }

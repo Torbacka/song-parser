@@ -13,6 +13,11 @@ public class Title {
     @XmlElement
     private List<String> alternativeTitle;
 
+    public Title(String title, List<String> alternativeTitle) {
+        this.title = title;
+        this.alternativeTitle = alternativeTitle;
+    }
+
     public String getTitle() {
         return title;
     }

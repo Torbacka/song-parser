@@ -7,10 +7,12 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.List;
 
+import business.SongConverter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import data.DiskData;
-import model.DISK.Song;
+import model.DISK.DiskSong;
 import model.DISK.XmlRoot;
+import model.SongBook;
 
 /**
  * Created by Daniel on 2017-02-06.
@@ -29,23 +31,22 @@ public class TextConverter {
 
     private void convert() throws URISyntaxException, IOException, JAXBException {
         /*File file = new File(getClass().getResource("songbook.txt").toURI());
-        SongbookParser songbookParser = new SongbookParser();
+        DiskParser songbookParser = new DiskParser();
         List<Lyrics> lyrics = songbookParser.parse(file.getAbsolutePath());*/
-        DiskData diskData = new DiskData();
-        List<Song> songs = diskData.getSongs();
-        writeToJson(songs);
-        writeToXml(songs);
+        SongConverter songConverter = new SongConverter();
+        SongBook songBook = songConverter.convert();
+        writeToJson(songBook);
+        writeToXml(songBook);
     }
 
-    private void writeToXml(List<Song> songs) throws JAXBException, IOException {
-        XmlRoot xmlRoot = new XmlRoot(songs);
-        JAXBContext jaxbContext = JAXBContext.newInstance(XmlRoot.class);
+    private void writeToXml(SongBook songBook) throws JAXBException, IOException {
+        JAXBContext jaxbContext = JAXBContext.newInstance(SongBook.class);
         Marshaller marshaller = jaxbContext.createMarshaller();
-        marshaller.marshal(xmlRoot, new FileWriter(new File("songs.xml")));
+        marshaller.marshal(songBook, new FileWriter(new File("songs.xml")));
     }
 
-    private void writeToJson(List<Song> songs) throws IOException {
+    private void writeToJson(SongBook songBook) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        mapper.writeValue(new File("songs.json"), songs);
+        mapper.writeValue(new File("songs.json"), songBook);
     }
 }
