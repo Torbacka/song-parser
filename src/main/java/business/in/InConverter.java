@@ -1,4 +1,4 @@
-package business.IN;
+package business.in;
 
 import data.INData;
 import model.SongBook;

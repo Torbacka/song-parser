@@ -1,4 +1,4 @@
-import business.DISK.DiskParser;
+import business.disk.DiskParser;
 import model.DISK.Lyrics;
 import model.DISK.RawLyrics;
 import org.junit.Before;

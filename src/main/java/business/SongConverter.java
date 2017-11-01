@@ -1,7 +1,7 @@
 package business;
 
-import business.DISK.DiskConverter;
-import business.IN.InConverter;
+import business.disk.DiskConverter;
+import business.in.InConverter;
 import data.DiskData;
 import data.INData;
 import model.SongBook;

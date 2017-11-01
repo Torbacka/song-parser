@@ -84,7 +84,7 @@ public class DiskData {
                 "O alte Burschenherrlichkeit",
                 "",
                 "Text: Eugen Höfling",
-                "O alte Burschenherrlichkeit,\nWohin bist du entschwunden,\nNie kehrst du wieder gold'ne Zeit,\nSo froh und ungebunden!\nVergebens spähe ich umher,\nIch finde deine Spur nicht mehr.\nO jerum, jerum, jerum,\nO quae mutatio rerum.\n\nDen Burschenhut bedeckt der Staub,\nEs sank der Flaus in Trümmer,\nDer Schläger ward des Rostes Raub,\nErblichen ist sein Schimmer.\nVerklungen der Kommersgesang,\nVerhallt Rapier- und Sporenklang.\nO jerum...\n\nWo sind sie, die vom breiten Stein\nNicht wankten und nicht wichen,\nDie ohne Moos bei Scherz und Wein,\nDem Herrn der Erde glichen?\nSie zogen mit gesenktem Blick\nIn das Philisterland zurück.\nO jerum...\n\nDa schreibt mit finsterem Amtsgesicht\nDer eine Relationen.\nDer andere seufzt beim Untericht,\nUnd der macht Rezensionen;\nDer schilt die sünd'ge Seele aus\nUnd der flickt ihr verfallnes Haus.\nO jerum...\n\nAuf öder Strecke schraubt und spannt\nDas Fadenkreuz der eine,\nDer andre seufzt beim Blockverband,\nUnd der setzt Ziegelsteine;\nDer kocht aus Rüben Zuckersaft\nUnd der aus Wasser Pferdekraft.\nO jerum...\n\nZur Börse schnell der eine rennt,\nZu tät'gem Geschäfte,\nDer andre sitzt beim Kontokorrent\nUnd der nützt fremde Kräfte;\nDer importiert aus Turkestan\nUnd der bohrt seine Schuldner an.\nO jerum...\n\nAllein das rechte Burschenherz\nKann nimmermehr erkalten,\nIm Ernste wird, wie hier im Scherz,\nDer rechte Sinn stehts walten;\nDie alte Schale nur ist fern,\nGeblieben ist uns doch der Kern,\nUnd den lasst fest uns halten, \nUnd den lasst fest uns halten.\n\nD'rum Freunde reichet euch die Hand,\nDamit es sich erneue,\nDer alten Freundschaft heil'ges Band,\nDas alte Band der Treue.\nKlingt an und hebt die Gläser hoch,\nDie alten Burschen leben noch,\nNoch lebt die alte Treue,\nNoch lebt die alte Treue.",
+                "O alte Burschenherrlichkeit,\nWohin bist du entschwunden,\nNie kehrst du wieder gold'ne Zeit,\nSo froh und ungebunden!\nVergebens spähe ich umher,\nIch finde deine Spur nicht mehr.\nO jerum, jerum, jerum,\nO quae mutatio rerum.\n\nDen Burschenhut bedeckt der Staub,\nEs sank der Flaus in Trümmer,\nDer Schläger ward des Rostes Raub,\nErblichen ist sein Schimmer.\nVerklungen der Kommersgesang,\nVerhallt Rapier- und Sporenklang.\nO jerum...\n\nWo sind sie, die vom breiten Stein\nNicht wankten und nicht wichen,\nDie ohne Moos bei Scherz und Wein,\nDem Herrn der Erde glichen?\nSie zogen mit gesenktem Blick\nin das Philisterland zurück.\nO jerum...\n\nDa schreibt mit finsterem Amtsgesicht\nDer eine Relationen.\nDer andere seufzt beim Untericht,\nUnd der macht Rezensionen;\nDer schilt die sünd'ge Seele aus\nUnd der flickt ihr verfallnes Haus.\nO jerum...\n\nAuf öder Strecke schraubt und spannt\nDas Fadenkreuz der eine,\nDer andre seufzt beim Blockverband,\nUnd der setzt Ziegelsteine;\nDer kocht aus Rüben Zuckersaft\nUnd der aus Wasser Pferdekraft.\nO jerum...\n\nZur Börse schnell der eine rennt,\nZu tät'gem Geschäfte,\nDer andre sitzt beim Kontokorrent\nUnd der nützt fremde Kräfte;\nDer importiert aus Turkestan\nUnd der bohrt seine Schuldner an.\nO jerum...\n\nAllein das rechte Burschenherz\nKann nimmermehr erkalten,\nIm Ernste wird, wie hier im Scherz,\nDer rechte Sinn stehts walten;\nDie alte Schale nur ist fern,\nGeblieben ist uns doch der Kern,\nUnd den lasst fest uns halten, \nUnd den lasst fest uns halten.\n\nD'rum Freunde reichet euch die Hand,\nDamit es sich erneue,\nDer alten Freundschaft heil'ges Band,\nDas alte Band der Treue.\nKlingt an und hebt die Gläser hoch,\nDie alten Burschen leben noch,\nNoch lebt die alte Treue,\nNoch lebt die alte Treue.",
                 ""));
 
         songs.add(new DiskSong(
@@ -2125,10 +2125,10 @@ public class DiskData {
                         "Said the girl in the bed with nothing on at all.",
                 ""));
         songs.add(new DiskSong(
-                "In kommer far",
+                "in kommer far",
                 "Melodi: Å jänta å jag",
                 "",
-                "In kommer far, full som han var.\n" +
+                "in kommer far, full som han var.\n" +
                         "Drämde sin task i bordet.\n" +
                         "Efter kommer mor, gorma och svor,\n" +
                         "undra vad fan han gjorde.\n" +
@@ -2457,7 +2457,7 @@ public class DiskData {
                         "He shook her hand and he wished her luck. \n" +
                         "\n" +
                         "Round and round went the fucking great wheel.\n" +
-                        "In and out went the prick of steel. \n" +
+                        "in and out went the prick of steel. \n" +
                         "\n" +
                         "\n" +
                         "Up and up went the level of steam.\n" +
@@ -2966,7 +2966,7 @@ public class DiskData {
         songs.add(new DiskSong(
                 "Jannes snuskvisa",
                 "Melodi: My bonnie",
-                "Text: Janne Weijnitz, Djurmästeriet, DISK KM",
+                "Text: Janne Weijnitz, Djurmästeriet, disk KM",
                 "Pojke: Min förhud är röd och den svider.\n" +
                         "Flicka: Min framstjärt är öm och gör ont.\n" +
                         "Båda:   Vi har ju haft kul hela natten,\n" +

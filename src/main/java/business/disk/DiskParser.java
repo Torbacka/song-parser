@@ -1,23 +1,24 @@
-package business.DISK;
-
-import model.DISK.Lyrics;
-import model.DISK.RawLyrics;
-import model.Text;
+package business.disk;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import model.DISK.Lyrics;
+import model.DISK.RawLyrics;
+import model.Text;
+import org.apache.log4j.Logger;
+
 /**
  * Created by Daniel on 2017-02-05.
  */
 public class DiskParser {
+    private static final Logger LOG = Logger.getLogger(DiskParser.class);
 
     public Text parse(String text) {
         String[] verses = text.split("\n\n");
@@ -37,23 +38,23 @@ public class DiskParser {
     private List<RawLyrics> parseRawSongbook(List<String> songbookLines) {
         String title = "";
         String melody = "";
-        String lyrics = "";
+        StringBuilder lyricsBuilder = new StringBuilder();
         String lastRow = "";
         List<RawLyrics> rawLyricss = new ArrayList<>();
 
         for (String row : songbookLines) {
-            lyrics += row + '\n';
+            lyricsBuilder.append(row).append('\n');
             if (row.toLowerCase().startsWith("mel")) {
                 if (!title.isEmpty() && !melody.isEmpty()) {
-                    rawLyricss.add(new RawLyrics(title, melody, trimLyrics(lyrics)));
+                    rawLyricss.add(new RawLyrics(title, melody, trimLyrics(lyricsBuilder.toString())));
                 }
                 title = lastRow;
-                melody = row.substring(row.indexOf(":") + 1).trim();
-                lyrics = "";
+                melody = row.substring(row.indexOf(':') + 1).trim();
+                lyricsBuilder = new StringBuilder();
             }
             lastRow = row;
         }
-        rawLyricss.add(new RawLyrics(title, melody, lyrics));
+        rawLyricss.add(new RawLyrics(title, melody, lyricsBuilder.toString()));
         return rawLyricss;
     }
 
@@ -61,7 +62,7 @@ public class DiskParser {
     private String trimLyrics(String lyrics) {
 
         String temp = lyrics.substring(0, lyrics.toLowerCase().indexOf("\nmel"));
-        return temp.substring(0, temp.lastIndexOf("\n"));
+        return temp.substring(0, temp.lastIndexOf('\n'));
     }
 
     private Lyrics parseRawLyrics(RawLyrics rawLyrics) {
@@ -69,29 +70,29 @@ public class DiskParser {
         String[] rows = text.split("\n");
         List<String> verses = new ArrayList<>();
         Map<String, String> extraInformations = new HashMap<>();
-        String verse = "";
+        StringBuilder verse = new StringBuilder();
         for (String row : rows) {
             if (row.isEmpty()) {
-                if(!verse.isEmpty())
-                    verses.add(verse);
-                verse = "";
+                if(verse.length() != 0)
+                    verses.add(verse.toString());
+                verse = new StringBuilder();
                 continue;
             }
             if (containsExtraInfo(row)) {
                 String[] split = row.split(":");
-                String information = "";
+                StringBuilder information = new StringBuilder();
                 for(int i = 1; i < split.length;i++){
-                    information += split[i];
+                    information.append(split[i]);
                 }
-                extraInformations.put(split[0], information);
+                extraInformations.put(split[0], information.toString());
 
             } else {
-                verse += row + "\n";
+                verse.append(row).append('\n');
             }
 
         }
-        if(!verse.isEmpty())
-            verses.add(verse);
+        if((verse.length() != 0))
+            verses.add(verse.toString());
         return new Lyrics(rawLyrics, verses, extraInformations);
     }
 
@@ -103,7 +104,7 @@ public class DiskParser {
             return split[0].contains(":");
 
         }catch (ArrayIndexOutOfBoundsException e) {
-            e.printStackTrace();
+            LOG.error(e);
         }
         return false;
     }

@@ -1,4 +1,4 @@
-package business.DISK;
+package business.disk;
 
 import java.time.LocalDate;
 import java.util.Arrays;
