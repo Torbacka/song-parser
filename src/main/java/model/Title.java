@@ -9,17 +9,17 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Title {
     @XmlAttribute
-    private String title;
+    private String text;
     @XmlElement
     private List<String> alternativeTitle;
 
-    public Title(String title, List<String> alternativeTitle) {
-        this.title = title;
+    public Title(String text, List<String> alternativeTitle) {
+        this.text = text;
         this.alternativeTitle = alternativeTitle;
     }
 
-    public String getTitle() {
-        return title;
+    public String getText() {
+        return text;
     }
 
     public List<String> getAlternativeTitle() {

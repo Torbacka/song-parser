@@ -14,16 +14,16 @@ import model.Title;
 
 public class DiskConverter {
 
-    public SongBook convert(DiskData diskData) {
+    public SongBook convertDiskSong(DiskData diskData) {
         List<DiskSong> diskSongs = diskData.getSongs();
         List<Song> songs = diskSongs.stream()
-                .map(this::convert)
+                .map(this::convertDiskSong)
                 .collect(Collectors.toList());
         return new SongBook(LocalDate.now(), songs);
 
     }
 
-    private Song convert(DiskSong diskSong) {
+    private Song convertDiskSong(DiskSong diskSong) {
         DiskParser diskParser = new DiskParser();
         Text text = diskParser.parse(diskSong.getText());
         Title title = new Title(diskSong.getTitle(), null);

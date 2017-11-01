@@ -11,12 +11,12 @@ public class SongConverter {
 
     public SongBook convert() {
         DiskConverter diskConverter = new DiskConverter();
-        SongBook diskSongBook = diskConverter.convert(new DiskData());
+        SongBook diskSongBook = diskConverter.convertDiskSong(new DiskData());
 
         InConverter inConverter = new InConverter();
         SongBook inSongBook =  inConverter.convert(new INData(IN_DATA_PATH));
 
-        return SongBookCombineer.combine(diskSongBook, inSongBook);
+        return SongBookCombiner.combine(diskSongBook, inSongBook);
     }
 
 }
