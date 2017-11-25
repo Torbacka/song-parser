@@ -8,7 +8,10 @@ class SongBookCombiner {
     }
 
     static SongBook combine(SongBook... songBooks) {
-        return null;
+        SongBookBuilder songBookBuilder = new SongBookBuilder();
+        for(SongBook songBook : songBooks) {
+            songBookBuilder.append(songBook);
+        }
+        return songBookBuilder.getValue();
     }
-
 }
